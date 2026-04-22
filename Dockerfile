@@ -12,10 +12,10 @@ COPY src src
 COPY predict.py .
 RUN ./mvnw clean package -DskipTests
 
-FROM python:3.11-slim
+FROM eclipse-temurin:17-jre-jammy
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends openjdk-17-jre-headless \
+    && apt-get install -y --no-install-recommends python3 \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
