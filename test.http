@@ -1,0 +1,8 @@
+POST http://localhost:8080/api/data
+Content-Type: application/json
+
+{
+  "pollution": 90.5,
+  "temperature": 24.2,
+  "humidity": 55.0
+}
