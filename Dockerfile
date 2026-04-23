@@ -23,6 +23,8 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 COPY --from=build /app/predict.py predict.py
 
+ENV SPRING_PROFILES_ACTIVE=railway
+
 EXPOSE 8080
 
 CMD ["sh", "-c", "java -jar app.jar"]
