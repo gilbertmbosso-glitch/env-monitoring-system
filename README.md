@@ -123,6 +123,11 @@ Recommended deployment:
 - Database: Railway MySQL
 - Frontend: Vercel
 
+For a free online demo, the backend can also run on Railway with the `railway`
+profile. That profile uses an embedded H2 database stored at `/tmp/env_monitoring`
+inside the Railway container. This avoids needing a paid Railway MySQL resource,
+but data can be lost when the container is rebuilt or restarted.
+
 ### Backend Deployment on Railway
 
 This repository now includes:
@@ -142,6 +147,11 @@ Set these Railway environment variables:
 - `DB_PASSWORD`
 - `OPENWEATHER_API_KEY`
 - `SHOW_SQL=false`
+
+For the free H2 demo mode, set these instead:
+
+- `SPRING_PROFILES_ACTIVE=railway`
+- `OPENWEATHER_API_KEY=your_api_key_here`
 
 Important:
 
