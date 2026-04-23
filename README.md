@@ -37,7 +37,6 @@ Set these before running the backend:
 - `DB_USERNAME`
 - `DB_PASSWORD`
 - `OPENWEATHER_API_KEY`
-- `SHOW_SQL` (optional, default `false`)
 
 Example PowerShell session:
 
@@ -146,7 +145,6 @@ Set these Railway environment variables:
 - `DB_USERNAME`
 - `DB_PASSWORD`
 - `OPENWEATHER_API_KEY`
-- `SHOW_SQL=false`
 
 For the free H2 demo mode, set these instead:
 
